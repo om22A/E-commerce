@@ -155,7 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
             categories.forEach(category => {
                 const button = document.createElement('button');
                 button.className = 'btn btn-outline-dark me-2 category-btn';
-                button.textContent = category === 'all' ? 'الكل' : category;
+                
+                // ===================================
+                // ==== قم بالتعديل في السطر التالي ====
+                // ===================================
+                button.textContent = category === 'all' ? 'All' : category;
+                
                 button.dataset.category = category;
                 if (category === 'all') button.classList.add('active');
                 categoryFilters.appendChild(button);
